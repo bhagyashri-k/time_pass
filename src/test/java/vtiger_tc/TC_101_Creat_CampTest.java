@@ -16,6 +16,8 @@ import com.github.javafaker.Faker;
 import com.vtiger.generic.WebDriverUtility;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pom_Repo.HomePage;
+import pom_Repo.LoginPage;
 
 public class TC_101_Creat_CampTest {
      public static WebDriver driver; 
@@ -40,12 +42,16 @@ Prop_File file = Prop_File.getObj();
 		WebDriverUtility driverUtil = new WebDriverUtility(driver);
 		driverUtil.maximixzWindow();
 		driverUtil.pageLoadTime();
-		driver.get("http://localhost:8888/index.php?action=index&module=Home");
+		driver.get(url);
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//input[@name='user_name']")).sendKeys(uname,Keys.TAB,pwd,Keys.ENTER);
-		WebElement more = driver.findElement(By.xpath("//img[@src='themes/softed/images/menuDnArrow.gif']"));
-		Actions act = new Actions(driver);
-		act.moveToElement(more).perform();
+		LoginPage login = new LoginPage(driver);
+
+		login.getUsernametxtbox().sendKeys(uname);
+		login.getPasswordtxtbox().sendKeys(pwd);
+		login.getLoginbtn().click();
+		HomePage hpage = new HomePage(driver);
+		WebElement moreoption = hpage.getMoreoptlinkbtn();
+		driverUtil.moveToElement(moreoption);
 		driver.findElement(By.xpath("//a[@name='Campaigns']")).click();
 		
 		driver.findElement(By.xpath("//img[@src='themes/softed/images/btnL3Add.gif']")).click();

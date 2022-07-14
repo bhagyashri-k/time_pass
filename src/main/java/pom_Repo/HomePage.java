@@ -43,6 +43,18 @@ public class HomePage {
 	public WebElement getContactlinkbtn() {
 		return contactlinkbtn;
 	}
+	
+	@FindBy(xpath="//img[@src='themes/softed/images/menuDnArrow.gif']")
+	private WebElement moreoptlinkbtn;
+	
+	public WebElement getMoreoptlinkbtn() {
+		return moreoptlinkbtn;
+	}
+	
+	@FindBy(xpath="//a[@name='Campaigns']")
+	private WebElement camplinkbtn;
+	
+	
 
 	
 	

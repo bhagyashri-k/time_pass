@@ -92,13 +92,13 @@ public class VT_Industry {
 		
 		crtorg.getHomepagebtnlink().click();
 
-		hpage.getLogoutbtn().click();
-
-		WebElement logoutbtn = hpage.getLogoutbtn();
-		Thread.sleep(3000);
-		driverUtil.moveToElement(logoutbtn);
-
-		hpage.getSignoutlinkbtn().click();
+//		hpage.getLogoutbtn().click();
+//
+//		WebElement logoutbtn = hpage.getLogoutbtn();
+//		Thread.sleep(3000);
+//		driverUtil.moveToElement(logoutbtn);
+//
+//		hpage.getSignoutlinkbtn().click();
 
 
 //		String str1 = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();

@@ -19,6 +19,12 @@ public class ContactInfoPg {
 	public WebElement getCreatecontbtn() {
 		return createcontbtn;
 	}
+	@FindBy(xpath="//span[@class='dvHeaderText']")
+	private WebElement savedcontHeadtxt;
+	
+	public WebElement getSavedcontHeadtxt() {
+		return savedcontHeadtxt;
+	}
 
 	
 

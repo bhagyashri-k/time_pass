@@ -1,4 +1,4 @@
-package com.vtiger.generic;
+package java_practice;
 
 public class Pattern_Prog {
 

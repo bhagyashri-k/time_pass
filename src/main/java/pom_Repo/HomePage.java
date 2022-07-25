@@ -54,11 +54,16 @@ public class HomePage {
 	@FindBy(xpath="//a[@name='Campaigns']")
 	private WebElement camplinkbtn;
 	
+	public WebElement getCamplinkbtn() {
+		return camplinkbtn;
+	}
 	
-
+	@FindBy(xpath="//td[@class='tabSelected']")
+	private WebElement campinfolnkbtn;
 	
-	
-	
+	public WebElement getCampinfolnkbtn() {
+		return campinfolnkbtn;
+	}
 
 	
 }

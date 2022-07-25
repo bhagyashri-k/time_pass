@@ -22,5 +22,32 @@ public class CreateContPg {
 	@FindBy(xpath="//input[@name='lastname']")
 	private WebElement lastnametxtbox;
 	
+	public WebElement getFirstnamedd() {
+		return firstnamedd;
+	}
+
+	public WebElement getFristnametxtbox() {
+		return fristnametxtbox;
+	}
+
+	public WebElement getLastnametxtbox() {
+		return lastnametxtbox;
+	}
+	
+	@FindBy(xpath="//img[@alt='Select']")
+	private WebElement orgnamelinkbtn;
+	
+	public WebElement getOrgnamelinkbtn() {
+		return orgnamelinkbtn;
+	}
+	
+	@FindBy(xpath="//input[@class='crmButton small save']")
+	private WebElement contsavebtn;
+	
+	public WebElement getContsavebtn() {
+		return contsavebtn;
+	}
+
+	
 
 }

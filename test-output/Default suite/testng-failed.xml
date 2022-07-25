@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vtiger_tc.VT_Industry">
+      <class name="vtiger_tc.TC_102_Create_Org_DelTest">
         <methods>
-          <include name="verifyIndustry"/>
+          <include name="createOrg"/>
+          <include name="login"/>
+          <include name="lounchBrowser"/>
+          <include name="connectDB"/>
+          <include name="closeBrowser"/>
+          <include name="closeDB"/>
+          <include name="logout"/>
         </methods>
-      </class> <!-- vtiger_tc.VT_Industry -->
+      </class> <!-- vtiger_tc.TC_102_Create_Org_DelTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -64,41 +64,5 @@ public class CreateOrgPage {
 
 	
 
-//	@FindBy(xpath="//img[@src='themes/softed/images/user.PNG']")
-//	private WebElement logoutbtn;
-//	
-//	
-//	public WebElement getLogoutbtn() {
-//		return logoutbtn;
-//	}
-//	
-//	@FindBy(xpath="//a[text()='Sign Out']")
-//	private WebElement signoutlinkbtn;
-//	
-//	public WebElement getSignoutlinkbtn() {
-//		return signoutlinkbtn;
-//	}
-
-	
-
-	
-
-	
-	
-//	@FindBy(xpath="//span[@class='dvHeaderText']")
-//	private WebElement orgnamesavedtxt;
-//	
-//	public WebElement getOrgnamesavedtxt() {
-//		return orgnamesavedtxt;
-//	}
-//
-//	@FindBy(xpath="//td[@id='mouseArea_Organization Name']")
-//	private WebElement orgnameexisttxtbox;
-//	
-//	
-//	public WebElement getOrgnameexisttxtbox() {
-//		return orgnameexisttxtbox;
-//	}
-
 	
 }

@@ -1,7 +1,7 @@
 package com.vtiger.generic;
 
 import java.time.Duration;
-
+import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -72,4 +72,22 @@ public class WebDriverUtility {
 	{
 		driver.switchTo().alert().accept();
 	}
+	
+//	public void windowHandle()
+//	{
+//		String main_page = driver.getWindowHandle();
+//		Set<String> all_page = driver.getWindowHandles();
+//
+//		for(String i : all_page)
+//		{
+//			if(!i.equals(main_page))
+//			{
+//				driver.switchTo().window(i);
+//			}
+//		}
+//	}
+//	public void  mainWindow()
+//	{
+//		driver.switchTo().window(main_page);
+//	}
 }

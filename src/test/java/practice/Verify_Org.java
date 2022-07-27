@@ -1,4 +1,4 @@
-package vtiger_tc;
+package practice;
 
 import java.io.IOException;
 import java.time.Duration;

@@ -1,4 +1,4 @@
-package vtiger_tc;
+package practice;
 
 import org.testng.annotations.Test;
 

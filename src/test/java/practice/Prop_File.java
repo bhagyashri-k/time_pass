@@ -1,4 +1,4 @@
-package vtiger_tc;
+package practice;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

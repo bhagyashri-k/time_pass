@@ -1,16 +1,19 @@
 package vtiger_tc;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import com.genericlib.BaseClass;
+import com.testNG.practice.RetryAnalyzer;
 import com.vtiger.generic.WebDriverUtility;
 
 import pom_Repo.CampaignInfopg;
 import pom_Repo.CreateCamppg;
 import pom_Repo.HomePage;
-
+import practice.Fake_Data;
+@Listeners(com.testNG.practice.ListenerImpliments.class)
 public class TC_103_Creat_Camp_Del_CampTest extends BaseClass {	
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void createCampTest() throws Throwable 
 	{
         WebDriverUtility driverUtil = new WebDriverUtility(driver);
@@ -19,8 +22,8 @@ public class TC_103_Creat_Camp_Del_CampTest extends BaseClass {
         CreateCamppg crtcmppg = new CreateCamppg(driver);
         
 		Fake_Data data = new Fake_Data();
-		String fname = data.firstName();
-		String lname = data.lastName();
+//		String fname = data.firstName();
+//		String lname = data.lastName();
 		String cname = data.companyName();
 		Thread.sleep(3000);
 		
@@ -49,6 +52,8 @@ public class TC_103_Creat_Camp_Del_CampTest extends BaseClass {
 		camppage.getDeletebtn().click();
 		Thread.sleep(3000);
 		driverUtil.acceptAlert();
+		
+		System.out.println("Campaign Created and Deleted Successfully");
 	}
 
 	

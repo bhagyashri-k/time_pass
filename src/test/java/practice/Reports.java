@@ -28,7 +28,7 @@ public class Reports {
 	{
 		reporter = new ExtentSparkReporter("../SDET7_BHA/new.html");
 		reporter.config().setDocumentTitle("First Screenshot");
-		reporter.config().setTheme(Theme.STANDARD);
+		reporter.config().setTheme(Theme.DARK);
 
 		reports = new ExtentReports();
 		reports.attachReporter(reporter);

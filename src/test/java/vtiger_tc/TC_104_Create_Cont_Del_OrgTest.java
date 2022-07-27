@@ -2,18 +2,21 @@ package vtiger_tc;
 
 import java.util.Set;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.genericlib.BaseClass;
+import com.testNG.practice.RetryAnalyzer;
 import com.vtiger.generic.WebDriverUtility;
 import pom_Repo.ContactInfoPg;
 import pom_Repo.CreateContPg;
 import pom_Repo.HomePage;
 import pom_Repo.OrgInfoPage;
-
+import practice.Fake_Data;
+@Listeners(com.testNG.practice.ListenerImpliments.class)
 public class TC_104_Create_Cont_Del_OrgTest extends BaseClass {
 	
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void createCont() throws Exception 
 	{ 
 		WebDriverUtility driverUtil = new WebDriverUtility(driver);
@@ -21,7 +24,7 @@ public class TC_104_Create_Cont_Del_OrgTest extends BaseClass {
 		Fake_Data data = new Fake_Data();
 		String fname = data.firstName();
 		String lname = data.lastName();
-		String cname = data.companyName();
+//		String cname = data.companyName();
 		
 		HomePage hpage = new HomePage(driver);
 
@@ -65,6 +68,7 @@ public class TC_104_Create_Cont_Del_OrgTest extends BaseClass {
 		if(headtxt.contains(fname))
 		{
 			System.out.println("Contact  Name is verified");
+			
 		}
 
 		

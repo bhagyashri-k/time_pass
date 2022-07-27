@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import vtiger_tc.Prop_File;
+import practice.Prop_File;
 
 public class Login_Logout {
 	public static WebDriver driver;

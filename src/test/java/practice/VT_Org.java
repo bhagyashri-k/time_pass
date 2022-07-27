@@ -12,7 +12,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import vtiger_tc.Prop_File;
 
 public class VT_Org {
   public static WebDriver driver;

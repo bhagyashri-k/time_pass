@@ -1,6 +1,10 @@
 package com.genericlib;
 
+import java.io.File;
 import java.io.IOException;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +14,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+
+import com.google.common.io.Files;
+import com.vtiger.generic.IAutoconstants;
 import com.vtiger.generic.WebDriverUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pom_Repo.CreateOrgPage;
@@ -18,6 +25,8 @@ import pom_Repo.LoginPage;
 public class BaseClass {
 
 	public  WebDriver driver;
+	public static WebDriver sdriver;
+	
 	WebDriverUtility driverUtil;
 	Prop_File file = Prop_File.getObj();
 	@BeforeSuite
@@ -46,6 +55,7 @@ public class BaseClass {
 		driverUtil.pageLoadTime();
 		String url = file.propdataRead("url");
 		driver.get(url);
+		sdriver = driver;
 		Thread.sleep(3000);
 	}
 	@AfterClass
@@ -78,6 +88,16 @@ public class BaseClass {
 		driverUtil.moveToElement(logoutbtn);
 
 		hpage.getSignoutlinkbtn().click();
+	}
+	
+	public static String takeScreenshot(String name) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot)BaseClass.sdriver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		String path = IAutoconstants.screenshotfile+name+".png";
+		File dest = new File(path);
+		Files.copy(src, dest);
+		return path;
+
 	}
 
 

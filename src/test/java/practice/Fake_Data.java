@@ -1,4 +1,4 @@
-package vtiger_tc;
+package practice;
 
 import com.github.javafaker.Faker;
 

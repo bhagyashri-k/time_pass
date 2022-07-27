@@ -1,41 +1,30 @@
 package vtiger_tc;
 
-import java.io.IOException;
-import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.genericlib.BaseClass;
-import com.github.javafaker.Faker;
+import com.testNG.practice.RetryAnalyzer;
 import com.vtiger.generic.WebDriverUtility;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import pom_Repo.CreateOrgPage;
 import pom_Repo.HomePage;
 import pom_Repo.OrgInfoPage;
-
+import practice.Fake_Data;
+@Listeners(com.testNG.practice.ListenerImpliments.class)
 public class TC_102_Create_Org_DelTest extends BaseClass {
 	
-	@Test
+	@Test(retryAnalyzer = RetryAnalyzer.class)
 	public void createOrg() throws Exception
 	{
 		WebDriverUtility driverUtil = new WebDriverUtility(driver);
 		
 		Fake_Data data = new Fake_Data();
-		String fname = data.firstName();
-		String lname = data.lastName();
+//		String fname = data.firstName();
+//		String lname = data.lastName();
 		String cname = data.companyName();
 		String cname1 = cname;
            
@@ -93,7 +82,7 @@ public class TC_102_Create_Org_DelTest extends BaseClass {
 				System.out.println("Test case pass");
 			}
 		}
-	
+	System.out.println("Organization created and Deleted Successfully");
 
 	}
 

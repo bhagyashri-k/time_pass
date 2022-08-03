@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Tes2">
-    <classes>
-      <class name="vtiger_tc.TC_102_Create_Org_DelTest"/>
-    </classes>
-  </test> <!-- Tes2 -->
-</suite> <!-- Suite -->

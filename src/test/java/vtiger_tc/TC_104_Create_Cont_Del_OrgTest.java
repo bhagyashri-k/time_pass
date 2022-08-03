@@ -16,7 +16,7 @@ import practice.Fake_Data;
 @Listeners(com.testNG.practice.ListenerImpliments.class)
 public class TC_104_Create_Cont_Del_OrgTest extends BaseClass {
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test(groups="regression",retryAnalyzer = RetryAnalyzer.class)
 	public void createCont() throws Exception 
 	{ 
 		WebDriverUtility driverUtil = new WebDriverUtility(driver);

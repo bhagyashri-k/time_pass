@@ -8,7 +8,9 @@ public interface IAutoconstants {
 	
 	String excelfile = currentdirectory+"/SDET7.xlsx";
 	
-	String screenshotfile = currentdirectory+"/ScreenShot/";
+	String screenshotfile = currentdirectory+"/ScreenShotFail/";
+	
+	String screenshotfile1 = currentdirectory+"/ScreenShotPass/";
 	
 	String extentreportfile = currentdirectory+"/ExtentReport/VTiger.html";
 

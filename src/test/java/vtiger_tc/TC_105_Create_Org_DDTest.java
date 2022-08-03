@@ -17,7 +17,7 @@ import practice.Fake_Data;
 public class TC_105_Create_Org_DDTest extends BaseClass {
 
 	
-  @Test(retryAnalyzer = RetryAnalyzer.class)
+  @Test(groups="smoke",retryAnalyzer = RetryAnalyzer.class)
   public void verifyIndustry() throws Exception 
 	{
 	  WebDriverUtility driverUtil = new WebDriverUtility(driver);

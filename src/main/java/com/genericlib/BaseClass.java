@@ -29,17 +29,17 @@ public class BaseClass {
 	
 	WebDriverUtility driverUtil;
 	Prop_File file = Prop_File.getObj();
-	@BeforeSuite
+	@BeforeSuite(groups= {"smoke","regression"})
 	public void connectDB() throws IOException
 	{
 		System.out.println("Connecting to database");	
 	}
-	@AfterSuite
+	@AfterSuite(groups= {"smoke","regression"})
 	public void closeDB()
 	{
 		System.out.println("Close DataBase");
 	}
-	@BeforeClass
+	@BeforeClass(groups= {"smoke","regression"})
 	public void lounchBrowser() throws Exception
 	{
 
@@ -58,13 +58,13 @@ public class BaseClass {
 		sdriver = driver;
 		Thread.sleep(3000);
 	}
-	@AfterClass
+	@AfterClass(groups= {"smoke","regression"})
 	public void closeBrowser()
 	{
 
 		driverUtil.closeBrowser();
 	}
-	@BeforeMethod
+	@BeforeMethod(groups= {"smoke","regression"})
 	public void login() throws IOException
 	{
 		String uname = file.propdataRead("username");
@@ -90,15 +90,28 @@ public class BaseClass {
 		hpage.getSignoutlinkbtn().click();
 	}
 	
-	public static String takeScreenshot(String name) throws IOException {
+	public static String takeScreenshotFail(String name) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot)BaseClass.sdriver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		String path = IAutoconstants.screenshotfile+name+".png";
+		
 		File dest = new File(path);
+		
 		Files.copy(src, dest);
 		return path;
 
 	}
+	public static String takeScreenshotPass(String name) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot)BaseClass.sdriver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		String path1 = IAutoconstants.screenshotfile1+name+".png";		
+		File dest = new File(path1);
+		
+		Files.copy(src, dest);
+		return path1;
+
+	}
+
 
 
 

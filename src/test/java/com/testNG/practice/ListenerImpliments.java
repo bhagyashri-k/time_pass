@@ -28,6 +28,15 @@ public class ListenerImpliments extends BaseClass implements ITestListener
 	public void onTestSuccess(ITestResult result) {
 		System.out.println("TC Pass");
 		test.log(Status.PASS,result.getMethod().getMethodName()+" got Pass");
+		
+		String path1;
+		try {
+			path1=BaseClass.takeScreenshotPass(result.getMethod().getMethodName());
+			test.addScreenCaptureFromPath(path1);
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
 
 	}
 
@@ -38,7 +47,7 @@ public class ListenerImpliments extends BaseClass implements ITestListener
 		test.log(Status.FAIL,result.getThrowable());
 		String path;
 		try {
-			path=BaseClass.takeScreenshot(result.getMethod().getMethodName());
+			path=BaseClass.takeScreenshotFail(result.getMethod().getMethodName());
 			test.addScreenCaptureFromPath(path);
 		} catch (IOException e) {
 

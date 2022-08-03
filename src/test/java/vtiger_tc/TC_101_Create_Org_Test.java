@@ -16,7 +16,7 @@ public class TC_101_Create_Org_Test extends BaseClass
 {
 
 
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test(groups="smoke",retryAnalyzer = RetryAnalyzer.class)
 	public  void orgTestCase1() throws Throwable 
 	{
 
@@ -24,7 +24,7 @@ public class TC_101_Create_Org_Test extends BaseClass
 		//		String fname = data.firstName();
 		//		String lname = data.lastName();
 		String cname = data.companyName();
-		Assert.assertEquals(true, false);
+		Assert.assertEquals(true, true);
 		HomePage hpage = new HomePage(driver);
 
 		hpage.getOrglinkbtn().click();

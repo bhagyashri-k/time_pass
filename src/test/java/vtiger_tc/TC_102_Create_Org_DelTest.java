@@ -17,7 +17,7 @@ import practice.Fake_Data;
 @Listeners(com.testNG.practice.ListenerImpliments.class)
 public class TC_102_Create_Org_DelTest extends BaseClass {
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test(groups="smoke",retryAnalyzer = RetryAnalyzer.class)
 	public void createOrg() throws Exception
 	{
 		WebDriverUtility driverUtil = new WebDriverUtility(driver);

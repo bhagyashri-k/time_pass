@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+<listener class-name="com.testNG.practice.ListenerImpliments"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+   <groups>
+<run>
+<include name="smoke"></include>
+</run>
+</groups>
+    <classes>
+      <class name="vtiger_tc.TC_103_Creat_Camp_Del_CampTest"/>
+      <class name="vtiger_tc.TC_102_Create_Org_DelTest"/>
+      <class name="vtiger_tc.TC_101_Create_Org_Test"/>
+      <class name="vtiger_tc.TC_105_Create_Org_DDTest"/>
+      <class name="vtiger_tc.TC_104_Create_Cont_Del_OrgTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

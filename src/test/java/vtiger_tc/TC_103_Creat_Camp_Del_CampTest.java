@@ -13,7 +13,7 @@ import pom_Repo.HomePage;
 import practice.Fake_Data;
 @Listeners(com.testNG.practice.ListenerImpliments.class)
 public class TC_103_Creat_Camp_Del_CampTest extends BaseClass {	
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test(groups="regression",retryAnalyzer = RetryAnalyzer.class)
 	public void createCampTest() throws Throwable 
 	{
         WebDriverUtility driverUtil = new WebDriverUtility(driver);

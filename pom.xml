@@ -85,51 +85,49 @@
 
 		</plugins>
 	</build>
-	
+
 	<profiles>
-	
-	<profile>
-      <id>smoke</id>
-         <build>
-		<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M7</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>testngsmoke.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
+		<profile>
+			<id>smoke</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M7</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>testngsmoke.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
 
-		</plugins>
-	</build>
-        
-    </profile>
-	 <profile>
-      <id>regression</id>
-         <build>
-		<plugins>
+		</profile>
+		<profile>
+			<id>regression</id>
+			<build>
+				<plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M7</version>
-				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>testngregression.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.0.0-M7</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>testngregression.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
 
-		</plugins>
-	</build>
-        
-    </profile>
-	
-	
+				</plugins>
+			</build>
+
+		</profile>
+
+
 	</profiles>
 
 </project>
